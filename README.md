@@ -1,24 +1,52 @@
-# 🧠 Island Memory Card Experiment
+# 🏝️ Island Memory Card Experiment — do caffeine or cocaine sharpen short‑term memory?
 
-*Does treatment X improve memory‑card scores?*  
-Course: **STA305 – Experimental Design** (Winter 2025)
+**Reproducible R workflow for Experimental Design Course**
+We blocked 150 islanders by age (18‑24 / 25‑44 / 45‑65) and randomised them to one of five treatments—cocaine, regular energy drink, caffeine‑free energy drink, sugar‑free energy drink, or water—before testing short‑term memory with a card‑matching game.
+**Headline result:** *none of the stimulants produced a statistically significant change in scores; age was the only meaningful predictor.*
 
-| 🔧 Tech stack | ✨ Highlights |
-|---------------|--------------|
-| R (tidyverse, performance, MASS) | • One‑way ANOVA and RCB designs <br>• Box‑Cox transformation for non‑normality <br>• Publication‑quality plots with ggplot2 |
-| Quarto        | Reproducible HTML/PDF report (`analysis.qmd`) |
-| renv          | One‑command environment rebuild (`renv::restore()`) |
+---
 
-## Quick start
+## 🔍 What’s inside
+
+| 🔧 Tech stack                                 | ✨ Highlights                                                                                                                                          |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **R** (tidyverse, MASS, performance, ggplot2) | • One‑way ANOVA & randomised complete block (RCB) models  <br>• Box‑Cox transformation to rescue normality  <br>• Publication‑ready plots via ggplot2 |
+| **Quarto**                                    | Narrative HTML / PDF report (`analysis.qmd`) knitted in CI                                                                                            |
+| **renv**                                      | One‑command environment rebuild → `renv::restore()`                                                                                                   |
+| **GitHub Actions**                            | Continuous R‑CMD‑check & Quarto render                                                                                                                |
+
+---
+
+## 🚀 Quick start
 
 ```bash
-git clone https://github.com/YOUR‑HANDLE/island‑memory‑study.git
-cd island‑memory‑study
+# clone & enter
+git clone https://github.com/Yuta-Kondo/island-memory-study.git
+cd island-memory-study
+
+# bootstrap R environment (≈1‑2 min)
 R -e "install.packages('renv'); renv::restore()"
+
+# knit the full analysis
 quarto render analysis.qmd
-open analysis.html
+open analysis.html  # or just click it
 ```
 
-> **Result in one line:** Treatment B raised mean memory‑card scores by **6.3 pts** (95 % CI 4.1 – 8.5) relative to control after age blocking.
+---
 
-![Boxplot of scores by treatment](outputs/figures/score_boxplot.png)
+## 📂 Repo layout
+
+```
+├── data/             # raw & processed CSVs
+├── R/                # modular helper functions
+├── analysis.qmd      # end‑to‑end notebook
+├── outputs/          # figures & knitted report
+└── renv.lock         # package versions
+```
+
+---
+
+## 📜 License
+
+Code is released under the MIT License — see [LICENSE](LICENSE) for details.
+Dataset (`data/raw/island_data.csv`) is part of a simulated coursework assignment; you may use it freely for learning and demonstration purposes but **not** redistribute it as real‑world data.
