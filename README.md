@@ -11,7 +11,6 @@ We blocked 150 islanders by age (18‑24 / 25‑44 / 45‑65) and randomis
 | 🔧 Tech stack                                 | ✨ Highlights                                                                                                                                          |
 | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **R** (tidyverse, MASS, performance, ggplot2) | • One‑way ANOVA & randomised complete block (RCB) models  <br>• Box‑Cox transformation to rescue normality  <br>• Publication‑ready plots via ggplot2 |
-| **Quarto**                                    | Narrative HTML / PDF report (`analysis.qmd`) knitted in CI                                                                                            |
 | **renv**                                      | One‑command environment rebuild → `renv::restore()`                                                                                                   |
 | **GitHub Actions**                            | Continuous R‑CMD‑check & Quarto render                                                                                                                |
 
