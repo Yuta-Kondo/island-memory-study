@@ -1,0 +1,24 @@
+# R specific
+.Rhistory
+.RData
+.Rproj.user/
+.Renviron
+
+# renv
+renv/library/
+renv/staging/
+renv/cellar/
+
+# Quarto specific
+_freeze/
+_publish/
+*.html
+*.pdf
+*.docx
+
+# Data
+data/processed/
+outputs/
+
+# macOS specific
+.DS_Store
