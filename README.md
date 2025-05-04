@@ -12,7 +12,7 @@ We blocked 150 islanders by age (18‑24 / 25‑44 / 45‑65) and randomis
 | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **R** (tidyverse, MASS, performance, ggplot2) | • One‑way ANOVA & randomised complete block (RCB) models  <br>• Box‑Cox transformation to rescue normality  <br>• Publication‑ready plots via ggplot2 |
 | **renv**                                      | One‑command environment rebuild → `renv::restore()`                                                                                                   |
-| **GitHub Actions**                            | Continuous R‑CMD‑check & Quarto render                                                                                                                |
+| **GitHub Actions**                            | Continuous R‑CMD‑check                                                                                                                |
 
 ---
 
@@ -25,10 +25,6 @@ cd island-memory-study
 
 # bootstrap R environment (≈1‑2 min)
 R -e "install.packages('renv'); renv::restore()"
-
-# knit the full analysis
-quarto render analysis.qmd
-open analysis.html  # or just click it
 ```
 
 ---
@@ -38,7 +34,6 @@ open analysis.html  # or just click it
 ```
 ├── data/             # raw & processed CSVs
 ├── R/                # modular helper functions
-├── analysis.qmd      # end‑to‑end notebook
 ├── outputs/          # figures & knitted report
 └── renv.lock         # package versions
 ```
